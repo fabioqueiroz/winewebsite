@@ -1,0 +1,61 @@
+﻿** BusinessWineUnitTest layout before introducing Dependency Injection **
+
+//// WITHOUT DI
+        //private IWineService _wineService;
+        //private IWineRepository _wineRepository;
+
+        //[TestInitialize]
+        //public void SetUp()
+        //{
+        //    _wineRepository = new WineRepository();
+        //    _wineService = new WineService(_wineRepository);
+        //}
+
+        //[TestMethod]
+        //public async Task AddWine()
+        //{
+        //    // *** test paterns ***
+
+        //    // Arrange
+        //    int id = 7;
+
+        //    // Act
+
+        //    var result = await _wineService.AddNewWine(new Commons.Business.Models.WineModel
+        //    {
+        //        Name = "Monte",
+        //        Region = new Commons.Business.Models.RegionModel
+        //        {
+        //            Name = "Rioja",
+        //            Country = new Commons.Business.Models.CountryModel
+        //            {
+        //                Name = "Spain"
+        //            }
+        //        }
+        //    });
+
+        //    // Assert
+
+        //    Assert.IsNotNull(result);
+        //    Assert.IsTrue(id == 7);
+        //    Assert.AreEqual(result.Name, "rioja");
+        //}
+
+        //[TestMethod]
+        //public async Task GetWineById()
+        //{
+        //    // *** test paterns ***
+
+        //    // Arrange
+        //    int id = 7;
+
+        //    // Act
+
+        //    var result = await _wineService.GetWineById(id);
+
+        //    // Assert
+
+        //    Assert.IsNotNull(result);
+        //    Assert.IsTrue(id == 7);
+        //    Assert.AreEqual(result.Name, "rioja");
+        //}

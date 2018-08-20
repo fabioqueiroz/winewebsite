@@ -1,0 +1,5 @@
+﻿// commands to migration DB
+add-migration
+
+// commands update DB
+update-database 

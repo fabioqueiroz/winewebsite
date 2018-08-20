@@ -1,0 +1,70 @@
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csprojResolveAssemblyReference.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csproj.CoreCompileInputs.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.AssemblyInfoInputs.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.AssemblyInfo.cs
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.deps.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.runtimeconfig.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.runtimeconfig.dev.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Business.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Data.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Business.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.deps.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.runtimeconfig.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.runtimeconfig.dev.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Business.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Business.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csprojResolveAssemblyReference.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.AssemblyInfo.cs
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.deps.json
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.runtimeconfig.json
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.runtimeconfig.dev.json
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Test.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Business.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Business.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.AssemblyInfo.cs
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csprojAssemblyReference.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csproj.CopyComplete

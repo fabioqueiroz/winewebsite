@@ -1,0 +1,61 @@
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.csprojResolveAssemblyReference.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.csproj.CoreCompileInputs.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.AssemblyInfoInputs.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.AssemblyInfo.cs
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.deps.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.runtimeconfig.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.runtimeconfig.dev.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Business.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Data.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Business.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.deps.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.runtimeconfig.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.runtimeconfig.dev.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Business.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Business.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.csprojResolveAssemblyReference.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.AssemblyInfo.cs
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.deps.json
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.runtimeconfig.json
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.runtimeconfig.dev.json
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.WebApi.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Business.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Business.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.AssemblyInfo.cs
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.csprojAssemblyReference.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.WebApi\obj\Debug\netcoreapp2.0\Wine.WebApi.csproj.CopyComplete

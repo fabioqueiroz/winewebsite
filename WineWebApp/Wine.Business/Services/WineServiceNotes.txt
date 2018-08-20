@@ -1,0 +1,59 @@
+﻿********** Add () **********
+1- The object is passed into the method
+2- The object is re-used
+3- The object is retrieved
+
+public async Task<WineModel> AddNewWine(WineModel newModel)
+        {
+            var addWine = _repository.Add<Wine.Data.Wine>(new Wine.Data.Wine
+            {
+                Name = newModel.Name,
+                RegionId = newModel.RegionId,
+                Price = newModel.Price,
+                Description = newModel.Description,
+                Sparkling = newModel.Sparkling
+                
+            });
+
+            await _repository.CommitAsync();
+
+            newModel.ID = addWine.ID;
+            newModel.Name = addWine.Name;
+            newModel.Price = addWine.Price;
+            newModel.Description = addWine.Description;
+
+            return newModel;
+        }
+
+
+
+********** Update () *************
+1- The object is passed to the method
+2- The object is reinitialized -> That means
+3- Compiler calls Garbage Collector
+4- Reserves memory again
+5- The object is retrieved
+
+
+		public async Task<WineModel> UpdateWineById(WineModel updModel)
+        {
+            var findModel = await _repository.GetSingleAsync<Wine.Data.Wine>(x => x.ID == updModel.ID);
+
+            findModel.Name = updModel.Name;
+            findModel.Price = updModel.Price;
+            findModel.Description = updModel.Description;
+
+            _repository.Update<Wine.Data.Wine>(findModel);
+
+            var response = new WineModel()
+            {
+                ID = findModel.ID,
+                Name = findModel.Name,
+                Price = findModel.Price,
+                Description = findModel.Description
+            };
+
+            await _repository.CommitAsync();
+
+            return response;
+        }

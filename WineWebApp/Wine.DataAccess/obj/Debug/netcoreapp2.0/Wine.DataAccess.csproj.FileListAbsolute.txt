@@ -1,0 +1,49 @@
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.csproj.CoreCompileInputs.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.AssemblyInfoInputs.cache
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.AssemblyInfo.cs
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.deps.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.runtimeconfig.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.runtimeconfig.dev.json
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Data.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.dll
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+c:\users\gabriel.renom\source\repos\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.deps.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.runtimeconfig.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.runtimeconfig.dev.json
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.csprojResolveAssemblyReference.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.AssemblyInfo.cs
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp (v.3)\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.deps.json
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.runtimeconfig.json
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.runtimeconfig.dev.json
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.AssemblyInfo.cs
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.csprojAssemblyReference.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.DataAccess\obj\Debug\netcoreapp2.0\Wine.DataAccess.csproj.CopyComplete

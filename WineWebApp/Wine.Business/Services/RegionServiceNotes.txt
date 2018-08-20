@@ -1,0 +1,59 @@
+﻿public async Task<List<RegionModel>> GetAllRegions()
+        {
+            List<RegionModel> AllRegions = new List<RegionModel>();
+
+            var getAllRegions = _repository.All<Wine.Data.Region>();
+
+			************ 1st possibility ***********
+
+            foreach (Wine.Data.Region region in getAllRegions)
+            {
+                var response = new RegionModel()
+                {
+                    ID = region.ID,
+                    Name = region.Name,
+                    CountryID = region.CountryID,
+                    Wines = region.Wines?.Select(x => new WineModel
+                    {
+                        ID = x.ID,
+                        Name = x.Name,
+                        Description = x.Description,
+                        Price = x.Price,
+                        RegionId = x.RegionId
+
+                    }).ToList()
+                };
+
+                AllRegions.Add(response);
+
+
+
+				************ 2nd possibility ***********
+
+
+
+                //var response2 = new RegionModel();
+
+                //if (response2.Wines != null)
+                //{
+                //    foreach (Wine.Data.Region item in getAllRegions)
+                //    {
+                //        response2.Name = item.Name;
+                //        response2.CountryID = item.CountryID;
+
+                //        foreach (Wine.Data.Wine wine in item.Wines)
+                //        {
+                //            response2.Wines.Add(new WineModel
+                //            {
+                //                ID = wine.ID,
+                //                Name = wine.Name,
+                //                Description = wine.Description,
+                //                Price = wine.Price
+                //            });
+                //        }
+                //    }
+                //}
+                //AllRegions.Add(response2);
+            }
+
+            return AllRegions;

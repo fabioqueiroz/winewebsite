@@ -1,0 +1,10 @@
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\bin\Release\netcoreapp2.0\appsettings.json
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\bin\Release\netcoreapp2.0\Wine.Commons.deps.json
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\bin\Release\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\bin\Release\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Release\netcoreapp2.0\Wine.Commons.csprojAssemblyReference.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Release\netcoreapp2.0\Wine.Commons.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Release\netcoreapp2.0\Wine.Commons.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Release\netcoreapp2.0\Wine.Commons.AssemblyInfo.cs
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Release\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Release\netcoreapp2.0\Wine.Commons.pdb

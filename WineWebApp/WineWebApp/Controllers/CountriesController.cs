@@ -50,7 +50,7 @@ namespace WineWebApp.Controllers
            
         }
 
-        // shows the edit page to update an entry
+        // shows the EDIT page to update an entry
         [HttpGet("{countryName}")]
         public async Task<IActionResult> Edit(string countryName)
         {
@@ -73,7 +73,7 @@ namespace WineWebApp.Controllers
             return View(output);
         }
 
-        // shows the delete confirmation page
+        // shows the DELETE confirmation page
         [HttpGet("DeleteCountryById/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -96,8 +96,13 @@ namespace WineWebApp.Controllers
             return View(output);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddCountry([FromBody]CountryViewModel newCountry)
+        // shows the CREATE confirmation page
+        [HttpGet("AddCountry")]
+        public async Task<IActionResult> Create() => View(new CountryViewModel());
+        
+        // creates an entry
+        [HttpPost("AddCountry")]
+        public async Task<IActionResult> AddCountry([Bind("ID", "Name")]CountryViewModel newCountry)
         {
             try
             {
@@ -119,12 +124,13 @@ namespace WineWebApp.Controllers
                     Name = addCountry.Name
                 };
 
-                return View(output);
             }
             catch (WebException)
             {
                 return View();
             }
+
+            return RedirectToAction("Index", "countries");
         }
 
         // updates entry

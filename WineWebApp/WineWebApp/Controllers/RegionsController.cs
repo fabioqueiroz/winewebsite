@@ -113,8 +113,12 @@ namespace WineWebApp.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddRegion([FromBody]RegionViewModel regionModel)
+        [HttpGet("AddRegion")]
+        public async Task<IActionResult> Create() => View(new RegionViewModel());
+
+
+        [HttpPost("AddRegion")]
+        public async Task<IActionResult> AddRegion([Bind("ID", "Name, CountryID")]RegionViewModel regionModel)
         {
             try
             {
@@ -137,13 +141,14 @@ namespace WineWebApp.Controllers
                     Name = addNewRegion.Name,
                     CountryID = addNewRegion.CountryID
                 };
-
-                return View(output);
+               
             }
             catch (WebException)
             {
                 return View();
             }
+
+            return RedirectToAction("Index", "regions");
         }
 
         [HttpPost("editregion")]

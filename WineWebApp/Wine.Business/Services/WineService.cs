@@ -31,7 +31,8 @@ namespace Wine.Business.Services
                     Name = wine.Name,
                     RegionID = wine.RegionId,
                     Price = wine.Price,
-                    Description = wine.Description
+                    Description = wine.Description,
+                    Sparkling = wine.Sparkling
                 };
 
                 allWines.Add(response);
@@ -45,7 +46,7 @@ namespace Wine.Business.Services
         {
             var wine = await _repository.GetSingleAsync<Wine.Data.Wine>(x => x.ID == id);
 
-            return new WineModel { ID = wine.ID, Name = wine.Name, Price = wine.Price, Description = wine.Description, RegionID = wine.RegionId };
+            return new WineModel { ID = wine.ID, Name = wine.Name, Price = wine.Price, Description = wine.Description, RegionID = wine.RegionId, Sparkling = wine.Sparkling };
         }
 
         // add a new wine
@@ -65,8 +66,10 @@ namespace Wine.Business.Services
 
             newModel.ID = addWine.ID;
             newModel.Name = addWine.Name;
+            newModel.RegionID = addWine.RegionId;
             newModel.Price = addWine.Price;
             newModel.Description = addWine.Description;
+            newModel.Sparkling = addWine.Sparkling;
 
             return newModel;
         }
@@ -80,6 +83,7 @@ namespace Wine.Business.Services
             findModel.RegionId = updModel.RegionID;
             findModel.Price = updModel.Price;
             findModel.Description = updModel.Description;
+            findModel.Sparkling = updModel.Sparkling;
 
             _repository.Update<Wine.Data.Wine>(findModel);
 

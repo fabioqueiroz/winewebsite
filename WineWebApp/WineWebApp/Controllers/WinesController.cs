@@ -32,8 +32,10 @@ namespace WineWebApp.Controllers
                 {
                     ID = x.ID,
                     Name = x.Name,
+                    RegionID = x.RegionID,
                     Description = x.Description,
-                    Price = x.Price
+                    Price = x.Price,
+                    Sparkling = x.Sparkling
 
                 }).ToList();
 
@@ -56,8 +58,10 @@ namespace WineWebApp.Controllers
                 {
                     ID = findWine.ID,
                     Name = findWine.Name,
+                    RegionID = findWine.RegionID,
                     Description = findWine.Description,
-                    Price = findWine.Price
+                    Price = findWine.Price,
+                    Sparkling = findWine.Sparkling
                 };
 
                 return View(output);
@@ -79,8 +83,10 @@ namespace WineWebApp.Controllers
                 {
                     ID = findWine.ID,
                     Name = findWine.Name,
+                    RegionID = findWine.RegionID,
                     Description = findWine.Description,
-                    Price = findWine.Price
+                    Price = findWine.Price,
+                    Sparkling = findWine.Sparkling
                 };
 
                 return View(output);
@@ -91,8 +97,11 @@ namespace WineWebApp.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddWine([FromBody]WineViewModel newEntry)
+        [HttpGet("AddWine")]
+        public async Task<IActionResult> Create() => View(new WineViewModel());
+
+        [HttpPost("AddWine")]
+        public async Task<IActionResult> AddWine([Bind("ID", "Name", "RegionID", "Description", "Price", "Sparkling")]WineViewModel newEntry)
         {
             try
             {
@@ -104,8 +113,10 @@ namespace WineWebApp.Controllers
                 var addWine = new WineModel
                 {
                     Name = newEntry.Name,
+                    RegionID = newEntry.RegionID,
                     Description = newEntry.Description,
                     Price = newEntry.Price,
+                    Sparkling = newEntry.Sparkling
                 };
 
                 await _wineService.AddNewWine(addWine);
@@ -114,21 +125,24 @@ namespace WineWebApp.Controllers
                 {
                     ID = addWine.ID,
                     Name = addWine.Name,
+                    RegionID = addWine.RegionID,
                     Description = addWine.Description,
-                    Price = addWine.Price
+                    Price = addWine.Price,
+                    Sparkling = addWine.Sparkling
                 };
 
-                return View(output);
             }
             catch (WebException)
             {
                 return View();
             }
+
+            return RedirectToAction("Index", "wines");
         }
 
         [HttpPost("editwine")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("ID, Name, Description, Price")]WineViewModel updEntry)
+        public async Task<IActionResult> Edit([Bind("ID", "Name", "RegionID", "Description", "Price", "Sparkling")]WineViewModel updEntry)
         {
             try
             {
@@ -141,8 +155,10 @@ namespace WineWebApp.Controllers
 
                 findWine.ID = updEntry.ID;
                 findWine.Name = updEntry.Name;
+                findWine.RegionID = updEntry.RegionID;
                 findWine.Description = updEntry.Description;
                 findWine.Price = updEntry.Price;
+                findWine.Sparkling = updEntry.Sparkling;
 
                 await _wineService.UpdateWineById(findWine);
 

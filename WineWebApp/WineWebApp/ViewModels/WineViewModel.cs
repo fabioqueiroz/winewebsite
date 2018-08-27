@@ -29,10 +29,14 @@
 
         public string Name { get; set; }
 
+        public int RegionID { get; set; }
+
+        public bool Sparkling { get; set; }
+       
+        public decimal Price { get; set; }
+
         public string Description { get; set; }
 
-        public decimal Price { get; set; }
-      
         public virtual RegionViewModel Region { get; set; }
 
         //public string Country { get; set; }

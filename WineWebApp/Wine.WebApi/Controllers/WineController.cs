@@ -9,6 +9,7 @@ using Wine.WebAPI.ViewModels;
 using System.Net.Http;
 using System.Security;
 using System.Diagnostics;
+using Wine.DataAccess;
 
 namespace Wine.WebAPI.Controllers
 {
@@ -56,8 +57,12 @@ namespace Wine.WebAPI.Controllers
 
                 var wineResponse = new WineViewModel()
                 {
-                    Id = wineModel.ID,
-                    Name = wineModel.Name
+                    ID = wineModel.ID,
+                    Name = wineModel.Name,
+                    Description = wineModel.Description,
+                    Price = wineModel.Price,
+                    Sparkling = wineModel.Sparkling,
+                    RegionId = wineModel.RegionId
                 };
 
                 return Ok(wineResponse);
@@ -99,7 +104,7 @@ namespace Wine.WebAPI.Controllers
 
  
         [HttpPost]
-        public IActionResult AddWine([FromBody]WineAddViewModel model)
+        public IActionResult AddWine([FromBody]WineViewModel model)
         {
             try
             {
@@ -116,14 +121,10 @@ namespace Wine.WebAPI.Controllers
                 {
                     // Id not added because the DB will generate it automatically             
                     Name = model.Name,
-                    Description = model.Description,
-                    Region = new Wine.Data.Region()
-                    {
-                        Name = "tuscany",
-                        Country = new Wine.Data.Country() { Name = "italy" }
-                    },
-
-                    Price = model.Price
+                    Description = model.Description,                   
+                    Price = model.Price,
+                    Sparkling = model.Sparkling,
+                    RegionId = model.RegionId
                 };
 
                 if (addNewWine != null)
@@ -135,11 +136,12 @@ namespace Wine.WebAPI.Controllers
 
                 var response = new WineViewModel()
                 {
-                    Id = addNewWine.ID,
-                    Description = addNewWine.Description,
+                    ID = addNewWine.ID,
                     Name = addNewWine.Name,
-                    Region = addNewWine.Region.Name,
-                    Price = addNewWine.Price
+                    Description = addNewWine.Description,
+                    Price = addNewWine.Price,
+                    Sparkling = addNewWine.Sparkling,
+                    RegionId = addNewWine.RegionId
                 };
 
                 return Ok(response);
@@ -153,7 +155,7 @@ namespace Wine.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateWine([FromBody]WineUpdateModel updModel)
+        public IActionResult UpdateWine([FromBody]WineViewModel updModel)
         {
             try
             {
@@ -163,13 +165,15 @@ namespace Wine.WebAPI.Controllers
                 }
 
                 // mapping 1
-                var wine = _context.Wines.Where(x => x.ID == updModel.Id).FirstOrDefault();
+                var wine = _context.Wines.Where(x => x.ID == updModel.ID).FirstOrDefault();
 
                 if (wine != null)
                 {
                     wine.Name = updModel.Name;
                     wine.Description = updModel.Description;
                     wine.Price = updModel.Price;
+                    wine.Sparkling = updModel.Sparkling;
+                    wine.RegionId = updModel.RegionId;
 
                     _context.Update(wine);
                     _context.SaveChanges();
@@ -177,10 +181,13 @@ namespace Wine.WebAPI.Controllers
 
                 var updResponse = new WineViewModel()
                 {
-                    Id = wine.ID,
+                    ID = wine.ID,
                     Name = wine.Name,
                     Description = wine.Description,
-                    Price = wine.Price
+                    Price = wine.Price,
+                    Sparkling = wine.Sparkling,
+                    RegionId = wine.RegionId
+
                 };
 
                 return Ok(updResponse);
@@ -203,7 +210,7 @@ namespace Wine.WebAPI.Controllers
                     return NotFound();
                 }
 
-                var wine = _context.Wines.Where(x => x.ID == id).FirstOrDefault(); // extracting the id from the DB; this ensures the region and the country are passed through as well  
+                var wine = _context.Wines.Where(x => x.ID == id).FirstOrDefault();  
                 
                 if (wine != null)
                 {

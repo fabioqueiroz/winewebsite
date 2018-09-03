@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Wine.WebAPI.ViewModels;
 
 namespace Wine.WebAPI.Models
 {
@@ -28,19 +30,22 @@ namespace Wine.WebAPI.Models
             get => _id;
             set => _id = value;
         }*/
-        
+
         // *** 3rd possibility: ***
-        public int Id { get; set; }
+        public int ID { get; set; }
 
         public string Name { get; set; }
 
-        public string Description { get; set; }
-
-        public string Country { get; set; }
-
-        public string Region { get; set; }
+        public bool Sparkling { get; set; }
 
         public decimal Price { get; set; }
+
+        public string Description { get; set; }
+
+        public int RegionId { get; set; }
+
+        [ForeignKey("RegionId")]
+        public virtual RegionViewModel Region { get; set; }
 
     }
 }

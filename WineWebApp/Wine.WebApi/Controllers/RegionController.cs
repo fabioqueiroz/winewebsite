@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Diagnostics;
 using System.Security;
 using Microsoft.EntityFrameworkCore;
+using Wine.DataAccess;
 
 namespace Wine.WebAPI.Controllers
 {
@@ -23,17 +24,17 @@ namespace Wine.WebAPI.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public JsonResult GetRegions()
-        {
-            return new JsonResult(new List<object>()
-            {
-                new {id = 1, name = "rioja", region = "rioja"},
-                new {id = 2, name = "verdejo", region = "rueda"},
-                new {id = 3, name = "barolo", region = "piemonte"},
-                new {id =4, name = "falanghina", region = "campania"}
-            });
-        }
+        //[HttpGet]
+        //public JsonResult GetRegions()
+        //{
+        //    return new JsonResult(new List<object>()
+        //    {
+        //        new {id = 1, name = "rioja", region = "rioja"},
+        //        new {id = 2, name = "verdejo", region = "rueda"},
+        //        new {id = 3, name = "barolo", region = "piemonte"},
+        //        new {id =4, name = "falanghina", region = "campania"}
+        //    });
+        //}
 
         [HttpGet("{region}")]
         public IActionResult GetRegion(string region)
@@ -49,8 +50,10 @@ namespace Wine.WebAPI.Controllers
 
                 var regionResponse = new RegionViewModel()
                 {
-                    Id = regionModel.ID,
-                    Name = regionModel.Name
+                    ID = regionModel.ID,
+                    Name = regionModel.Name,
+                    CountryId = regionModel.CountryId,
+
                 };
 
                 return Ok(regionResponse);
@@ -77,12 +80,17 @@ namespace Wine.WebAPI.Controllers
 
                 var regionResponse = new RegionViewModel()
                 {
-                    Id = regionSelectModel.ID,
+                    ID = regionSelectModel.ID,
                     Name = regionSelectModel.Name,
+                    CountryId = regionSelectModel.CountryId,
                     Wines = regionSelectModel.Wines != null ? regionSelectModel.Wines.Select(x => new WineViewModel
                     {
+                        ID = x.ID,
                         Name = x.Name,
-                        Description = x.Description, 
+                        Description = x.Description,
+                        Price = x.Price, 
+                        Sparkling = x.Sparkling,
+                        RegionId = x.RegionId
                         
                     }).ToList() : null
                 };
@@ -116,7 +124,7 @@ namespace Wine.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddRegion([FromBody]RegionAddViewModel regionModel)
+        public IActionResult AddRegion([FromBody]RegionViewModel regionModel)
         {
             try
             {
@@ -128,7 +136,7 @@ namespace Wine.WebAPI.Controllers
                 var addRegion = new Wine.Data.Region()
                 {
                     Name = regionModel.Name,
-                    Country = new Wine.Data.Country() { Name = "italy" }
+                    CountryId = regionModel.CountryId
                 };
 
                 if (addRegion != null)
@@ -139,9 +147,9 @@ namespace Wine.WebAPI.Controllers
 
                 var regionResponse = new RegionViewModel()
                 {
-                    Id = addRegion.ID,
+                    ID = addRegion.ID,
                     Name = addRegion.Name,
-                    Country = addRegion.Country.Name
+                    CountryId = addRegion.CountryId
                 };
 
                 return Ok(regionResponse);
@@ -155,7 +163,7 @@ namespace Wine.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateRegion([FromBody] RegionUpdateViewModel updRegionModel)
+        public IActionResult UpdateRegion([FromBody] RegionViewModel updRegionModel)
         {
             try
             {
@@ -164,12 +172,13 @@ namespace Wine.WebAPI.Controllers
                     return BadRequest();
                 }
 
-                var updRegion = _context.Regions.Where(x => x.ID == updRegionModel.Id).FirstOrDefault();
+                var updRegion = _context.Regions.Where(x => x.ID == updRegionModel.ID).FirstOrDefault();
 
                 if (updRegion != null)
                 {
-                    updRegion.ID = updRegionModel.Id;
+                    updRegion.ID = updRegionModel.ID;
                     updRegion.Name = updRegionModel.Name;
+                    updRegion.CountryId = updRegionModel.CountryId;
 
                     _context.Update(updRegion);
                     _context.SaveChanges();
@@ -177,8 +186,9 @@ namespace Wine.WebAPI.Controllers
 
                 var updRegionResponse = new RegionViewModel()
                 {
-                    Id = updRegion.ID,
-                    Name = updRegion.Name
+                    ID = updRegion.ID,
+                    Name = updRegion.Name,
+                    CountryId = updRegion.CountryId
                 };
 
                 return Ok(updRegionResponse);
@@ -204,10 +214,15 @@ namespace Wine.WebAPI.Controllers
 
                 var delRegion = _context.Regions.Where(x => x.ID == id).FirstOrDefault();
 
+                // wines also being deleted without needing to query as below:
+                //var delRegion = _context.Regions.Include(x => x.Wines).Where(x => x.ID == id).FirstOrDefault();
+
                 if (delRegion != null)
                 {
+
                     _context.Remove(delRegion);
                     _context.SaveChanges();
+
                     Trace.TraceInformation($"The item {id} from {delRegion.Name} has been deleted");
                 }
 

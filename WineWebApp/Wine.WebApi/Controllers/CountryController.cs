@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Security;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Wine.DataAccess;
 
 namespace Wine.WebAPI.Controllers
 {
@@ -23,17 +24,17 @@ namespace Wine.WebAPI.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public JsonResult GetCountry()
-        {
-            return new JsonResult(new List<object>
-            {
-                new {id = 1, name = "rioja", country = "spain"},
-                new {id = 2, name = "verdejo", country = "spain"},
-                new {id = 3, name = "barolo", country = "italy"},
-                new {id = 4, name = "falanghina", country = "italy"}
-            });
-        }
+        //[HttpGet]
+        //public JsonResult GetCountry()
+        //{
+        //    return new JsonResult(new List<object>
+        //    {
+        //        new {id = 1, name = "rioja", country = "spain"},
+        //        new {id = 2, name = "verdejo", country = "spain"},
+        //        new {id = 3, name = "barolo", country = "italy"},
+        //        new {id = 4, name = "falanghina", country = "italy"}
+        //    });
+        //}
 
         [HttpGet ("{country}")]
         public IActionResult GetCountry (string country)
@@ -49,7 +50,7 @@ namespace Wine.WebAPI.Controllers
 
                 var countryResponse = new CountryViewModel()
                 {
-                    Id = countryModel.ID,
+                    ID = countryModel.ID,
                     Name = countryModel.Name
                 };
 
@@ -77,11 +78,13 @@ namespace Wine.WebAPI.Controllers
 
                 var countryResponse = new CountryViewModel()
                 {
-                    Id = countrySelectModel.ID,
+                    ID = countrySelectModel.ID,
                     Name = countrySelectModel.Name,
                     Regions = countrySelectModel.Regions != null ? countrySelectModel.Regions.Select(x => new RegionViewModel
                     {
-                        Name = x.Name
+                        ID = x.ID,
+                        Name = x.Name,
+                        CountryId = x.CountryId
 
                     }).ToList(): null
                 };
@@ -97,7 +100,7 @@ namespace Wine.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddCountry ([FromBody]CountryAddViewModel countryModel)
+        public IActionResult AddCountry ([FromBody]CountryViewModel countryModel)
         {
             try
             {
@@ -119,7 +122,7 @@ namespace Wine.WebAPI.Controllers
 
                 var countryResponse = new CountryViewModel()
                 {
-                    Id = addCountry.ID,
+                    ID = addCountry.ID,
                     Name = addCountry.Name
                 };
 
@@ -134,7 +137,7 @@ namespace Wine.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateCountry([FromBody]CountryUpdateViewModel updCountryModel)
+        public IActionResult UpdateCountry([FromBody]CountryViewModel updCountryModel)
         {
             try
             {
@@ -143,11 +146,11 @@ namespace Wine.WebAPI.Controllers
                     return BadRequest();
                 }
 
-                var updCountry = _context.Countries.Where(x => x.ID == updCountryModel.Id).FirstOrDefault();
+                var updCountry = _context.Countries.Where(x => x.ID == updCountryModel.ID).FirstOrDefault();
 
                 if (updCountry != null)
                 {
-                    updCountry.ID = updCountryModel.Id;
+                    updCountry.ID = updCountryModel.ID;
                     updCountry.Name = updCountryModel.Name;
 
                     _context.Update(updCountry);
@@ -156,7 +159,7 @@ namespace Wine.WebAPI.Controllers
 
                 var updCountryResponse = new CountryViewModel()
                 {
-                    Id = updCountry.ID,
+                    ID = updCountry.ID,
                     Name = updCountry.Name
                 };
 
@@ -181,6 +184,9 @@ namespace Wine.WebAPI.Controllers
                 }
 
                 var delCountry = _context.Countries.Where(x => x.ID == id).FirstOrDefault();
+
+                // regions also being deleted without needing to query as below:
+                //var delCountry = _context.Countries.Include(x => x.Regions).Where(x => x.ID == id).FirstOrDefault(); 
 
                 if (delCountry != null)
                 {

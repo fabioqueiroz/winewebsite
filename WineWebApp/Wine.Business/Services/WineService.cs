@@ -29,7 +29,7 @@ namespace Wine.Business.Services
                 {
                     ID = wine.ID,
                     Name = wine.Name,
-                    RegionID = wine.RegionId,
+                    RegionId = wine.RegionId,
                     Price = wine.Price,
                     Description = wine.Description,
                     Sparkling = wine.Sparkling
@@ -46,7 +46,7 @@ namespace Wine.Business.Services
         {
             var wine = await _repository.GetSingleAsync<Wine.Data.Wine>(x => x.ID == id);
 
-            return new WineModel { ID = wine.ID, Name = wine.Name, Price = wine.Price, Description = wine.Description, RegionID = wine.RegionId, Sparkling = wine.Sparkling };
+            return new WineModel { ID = wine.ID, Name = wine.Name, Price = wine.Price, Description = wine.Description, RegionId = wine.RegionId, Sparkling = wine.Sparkling };
         }
 
         // add a new wine
@@ -55,7 +55,7 @@ namespace Wine.Business.Services
             var addWine = _repository.Add<Wine.Data.Wine>(new Wine.Data.Wine
             {
                 Name = newModel.Name,
-                RegionId = newModel.RegionID,
+                RegionId = newModel.RegionId,
                 Price = newModel.Price,
                 Description = newModel.Description,
                 Sparkling = newModel.Sparkling
@@ -66,7 +66,7 @@ namespace Wine.Business.Services
 
             newModel.ID = addWine.ID;
             newModel.Name = addWine.Name;
-            newModel.RegionID = addWine.RegionId;
+            newModel.RegionId = addWine.RegionId;
             newModel.Price = addWine.Price;
             newModel.Description = addWine.Description;
             newModel.Sparkling = addWine.Sparkling;
@@ -80,7 +80,7 @@ namespace Wine.Business.Services
             var findModel = await _repository.GetSingleAsync<Wine.Data.Wine>(x => x.ID == updModel.ID);
 
             findModel.Name = updModel.Name;
-            findModel.RegionId = updModel.RegionID;
+            findModel.RegionId = updModel.RegionId;
             findModel.Price = updModel.Price;
             findModel.Description = updModel.Description;
             findModel.Sparkling = updModel.Sparkling;

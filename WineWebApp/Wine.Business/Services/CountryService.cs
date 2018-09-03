@@ -36,7 +36,7 @@ namespace Wine.Business.Services
                     {
                         ID = x.ID,
                         Name = x.Name,
-                        CountryID = x.CountryID
+                        CountryId = x.CountryId
 
                     }).ToList()
                 };
@@ -59,7 +59,7 @@ namespace Wine.Business.Services
                 {
                     ID = x.ID,
                     Name = x.Name,
-                    CountryID = x.CountryID
+                    CountryId = x.CountryId
 
                 }).ToList()
             };
@@ -79,7 +79,7 @@ namespace Wine.Business.Services
                 {
                     ID = x.ID,
                     Name = x.Name,
-                    CountryID = x.CountryID                     
+                    CountryId = x.CountryId                     
 
                 }).ToList() 
                 

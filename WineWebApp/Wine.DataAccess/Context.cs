@@ -37,8 +37,8 @@ namespace Wine.DataAccess
             //var conectionString = configuration.GetConnectionString("DefaultConnection");           
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer("Data Source=GSY-LAP-022;Initial Catalog=wines;User Id=NovaAdmin;Password=NovaAdmin#;");
-                optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));                
+                //optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-23IAU6E\\SQLSERVER;Initial Catalog=Wine;Integrated Security=False;User Id=sa;Password=Manchester2018!;MultipleActiveResultSets=True");
             }
         }
 

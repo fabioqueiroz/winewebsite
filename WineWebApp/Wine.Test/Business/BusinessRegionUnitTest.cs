@@ -37,7 +37,7 @@ namespace Wine.Test.Business
         public async Task GetRegionByName() 
         {
             // Arrange
-            var newRegion = new RegionModel { Name = "Veneto", CountryID = 4};
+            var newRegion = new RegionModel { Name = "Veneto", CountryId = 4};
 
             var addRegion = await _regionService.AddNewRegion(newRegion);
 
@@ -55,7 +55,7 @@ namespace Wine.Test.Business
         public async Task GetAllRegions()
         {
             // Arrange
-            var region = new RegionModel { Name = "Bordeaux", CountryID = 5 };
+            var region = new RegionModel { Name = "Bordeaux", CountryId = 5 };
 
             var addRegion = await _regionService.AddNewRegion(region);
 
@@ -72,7 +72,7 @@ namespace Wine.Test.Business
         public async Task AddRegion()
         {
             // Arrange
-            var regionModel = new RegionModel { Name = "Tuscany", CountryID = 6 };
+            var regionModel = new RegionModel { Name = "Tuscany", CountryId = 6 };
 
             // Act
             var output = await _regionService.AddNewRegion(regionModel);
@@ -88,7 +88,7 @@ namespace Wine.Test.Business
         {
             // Arrange
 
-            var newRegion = new RegionModel { Name = "Bergerac", CountryID = 12 };
+            var newRegion = new RegionModel { Name = "Bergerac", CountryId = 12 };
 
             var addRegion = await _regionService.AddNewRegion(newRegion);
 
@@ -105,7 +105,7 @@ namespace Wine.Test.Business
         public async Task DeleteRegionByName() 
         {
             // Arrange
-            var region = new RegionModel { Name = "Algarve", CountryID = 6 };
+            var region = new RegionModel { Name = "Algarve", CountryId = 6 };
 
             var addRegion = await _regionService.AddNewRegion(region);
 

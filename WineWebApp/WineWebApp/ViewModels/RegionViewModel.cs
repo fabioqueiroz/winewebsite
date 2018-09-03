@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,8 +12,9 @@ namespace WineWebApp.ViewModels
 
         public string Name { get; set; }
 
-        public int CountryID { get; set; }
+        public int CountryId { get; set; }
 
+        [ForeignKey("CountryId")]
         public virtual CountryViewModel Country { get; set; }
 
         public ICollection<WineViewModel> Wines { get; set; }

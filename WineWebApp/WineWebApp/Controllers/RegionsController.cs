@@ -32,7 +32,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = x.ID,
                     Name = x.Name,
-                    CountryID = x.CountryID,
+                    CountryId = x.CountryId,
                     Wines = x.Wines?.Select(y => new WineViewModel
                     {
                         ID = y.ID,
@@ -64,7 +64,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = findRegion.ID,
                     Name = findRegion.Name,
-                    CountryID = findRegion.CountryID,
+                    CountryId = findRegion.CountryId,
                     Wines = findRegion.Wines?.Select(x => new WineViewModel
                     {
                         ID = x.ID,
@@ -94,7 +94,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = findRegion.ID,
                     Name = findRegion.Name,
-                    CountryID = findRegion.CountryID,
+                    CountryId = findRegion.CountryId,
                     Wines = findRegion.Wines?.Select(x => new WineViewModel
                     {
                         ID = x.ID,
@@ -118,7 +118,7 @@ namespace WineWebApp.Controllers
 
 
         [HttpPost("AddRegion")]
-        public async Task<IActionResult> AddRegion([Bind("ID", "Name, CountryID")]RegionViewModel regionModel)
+        public async Task<IActionResult> AddRegion([Bind("ID", "Name, CountryId")]RegionViewModel regionModel)
         {
             try
             {
@@ -130,7 +130,7 @@ namespace WineWebApp.Controllers
                 var addNewRegion = new RegionModel
                 {
                     Name = regionModel.Name,
-                    CountryID = regionModel.CountryID
+                    CountryId = regionModel.CountryId
                 };
 
                 await _regionService.AddNewRegion(addNewRegion);
@@ -139,7 +139,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = addNewRegion.ID,
                     Name = addNewRegion.Name,
-                    CountryID = addNewRegion.CountryID
+                    CountryId = addNewRegion.CountryId
                 };
                
             }
@@ -153,7 +153,7 @@ namespace WineWebApp.Controllers
 
         [HttpPost("editregion")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("ID, Name, CountryID")]RegionViewModel updRegion)
+        public async Task<IActionResult> Edit([Bind("ID, Name, CountryId")]RegionViewModel updRegion)
         {
             try
             {
@@ -166,7 +166,7 @@ namespace WineWebApp.Controllers
 
                 findRegion.ID = updRegion.ID;
                 findRegion.Name = updRegion.Name;
-                findRegion.CountryID = updRegion.CountryID;
+                findRegion.CountryId = updRegion.CountryId;
 
                 await _regionService.UpdateRegion(findRegion);
 

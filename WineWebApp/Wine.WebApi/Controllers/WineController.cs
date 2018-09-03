@@ -29,18 +29,18 @@ namespace Wine.WebAPI.Controllers
             _context = context;
         }
 
-        [HttpGet] // attribute to the routing table
-        public JsonResult GetWines()
-        {
-            //anonimous object
-            return new JsonResult(new List<object>
-            {
-                new {id = 1, name = "rioja", description = "red"},
-                new {id = 2, name = "verdejo", description = "white"},
-                new {id = 3, name = "barolo", description = "red"},
-                new {id = 4, name = "falanghina", description = "white"}
-            });
-        }
+        //[HttpGet] // attribute to the routing table
+        //public JsonResult GetWines()
+        //{
+        //    //anonimous object
+        //    return new JsonResult(new List<object>
+        //    {
+        //        new {id = 1, name = "rioja", description = "red"},
+        //        new {id = 2, name = "verdejo", description = "white"},
+        //        new {id = 3, name = "barolo", description = "red"},
+        //        new {id = 4, name = "falanghina", description = "white"}
+        //    });
+        //}
 
         [HttpGet("{id}")]
         public IActionResult GetWinebyId(int? id)

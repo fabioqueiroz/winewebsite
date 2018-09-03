@@ -32,7 +32,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = x.ID,
                     Name = x.Name,
-                    RegionID = x.RegionID,
+                    RegionId = x.RegionId,
                     Description = x.Description,
                     Price = x.Price,
                     Sparkling = x.Sparkling
@@ -58,7 +58,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = findWine.ID,
                     Name = findWine.Name,
-                    RegionID = findWine.RegionID,
+                    RegionId = findWine.RegionId,
                     Description = findWine.Description,
                     Price = findWine.Price,
                     Sparkling = findWine.Sparkling
@@ -83,7 +83,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = findWine.ID,
                     Name = findWine.Name,
-                    RegionID = findWine.RegionID,
+                    RegionId = findWine.RegionId,
                     Description = findWine.Description,
                     Price = findWine.Price,
                     Sparkling = findWine.Sparkling
@@ -101,7 +101,7 @@ namespace WineWebApp.Controllers
         public async Task<IActionResult> Create() => View(new WineViewModel());
 
         [HttpPost("AddWine")]
-        public async Task<IActionResult> AddWine([Bind("ID", "Name", "RegionID", "Description", "Price", "Sparkling")]WineViewModel newEntry)
+        public async Task<IActionResult> AddWine([Bind("ID, Name, Description, Price, Sparkling, RegionId")]WineViewModel newEntry)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace WineWebApp.Controllers
                 var addWine = new WineModel
                 {
                     Name = newEntry.Name,
-                    RegionID = newEntry.RegionID,
+                    RegionId = newEntry.RegionId,
                     Description = newEntry.Description,
                     Price = newEntry.Price,
                     Sparkling = newEntry.Sparkling
@@ -125,7 +125,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = addWine.ID,
                     Name = addWine.Name,
-                    RegionID = addWine.RegionID,
+                    RegionId = addWine.RegionId,
                     Description = addWine.Description,
                     Price = addWine.Price,
                     Sparkling = addWine.Sparkling
@@ -142,7 +142,7 @@ namespace WineWebApp.Controllers
 
         [HttpPost("editwine")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("ID", "Name", "RegionID", "Description", "Price", "Sparkling")]WineViewModel updEntry)
+        public async Task<IActionResult> Edit([Bind("ID, Name, Description, Price, Sparkling, RegionId")]WineViewModel updEntry)
         {
             try
             {
@@ -155,7 +155,7 @@ namespace WineWebApp.Controllers
 
                 findWine.ID = updEntry.ID;
                 findWine.Name = updEntry.Name;
-                findWine.RegionID = updEntry.RegionID;
+                findWine.RegionId = updEntry.RegionId;
                 findWine.Description = updEntry.Description;
                 findWine.Price = updEntry.Price;
                 findWine.Sparkling = updEntry.Sparkling;

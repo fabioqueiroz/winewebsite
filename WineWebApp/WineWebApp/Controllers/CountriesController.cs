@@ -35,7 +35,7 @@ namespace WineWebApp.Controllers
                     {
                          ID = y.ID,
                          Name = y.Name,   
-                         CountryID = y.CountryID
+                         CountryId = y.CountryId
 
                     }).ToList()
 
@@ -64,7 +64,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = x.ID,
                     Name = x.Name,
-                    CountryID = x.CountryID
+                    CountryId = x.CountryId
 
                 }).ToList()
 
@@ -87,7 +87,7 @@ namespace WineWebApp.Controllers
                 {
                     ID = x.ID,
                     Name = x.Name,
-                    CountryID = x.CountryID
+                    CountryId = x.CountryId
 
                 }).ToList()
 

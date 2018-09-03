@@ -29,14 +29,14 @@ namespace Wine.Business.Services
                 {
                     ID = region.ID,
                     Name = region.Name,
-                    CountryID = region.CountryID,
+                    CountryId = region.CountryId,
                     Wines = region.Wines?.Select(x => new WineModel
                     {
                         ID = x.ID,
                         Name = x.Name,
                         Description = x.Description,
                         Price = x.Price,
-                        RegionID = x.RegionId
+                        RegionId = x.RegionId
 
                     }).ToList()
                 };
@@ -78,14 +78,14 @@ namespace Wine.Business.Services
             {
                 ID = region.ID,
                 Name = region.Name,
-                CountryID = region.CountryID,
+                CountryId = region.CountryId,
                 Wines = region.Wines?.Select(x => new WineModel
                 {
                     ID = x.ID,
                     Name = x.Name,
                     Description = x.Description,
                     Price = x.Price,
-                    RegionID = x.RegionId
+                    RegionId = x.RegionId
 
                 }).ToList()
             };
@@ -99,14 +99,14 @@ namespace Wine.Business.Services
             {
               // ID will be created automatically here
                 Name = newModel.Name,
-                CountryID = newModel.CountryID               
+                CountryId = newModel.CountryId               
             });
 
             await _repository.CommitAsync();
 
             newModel.ID = addRegion.ID; // at this point the ID will already be generated and has to be sent back
             newModel.Name = addRegion.Name;
-            newModel.CountryID = addRegion.CountryID;
+            newModel.CountryId = addRegion.CountryId;
 
             return newModel;
         }
@@ -116,7 +116,7 @@ namespace Wine.Business.Services
             var updRegion = await _repository.GetSingleAsync<Wine.Data.Region>(x => x.Name == updModel.Name);
 
             updRegion.Name = updModel.Name;
-            updRegion.CountryID = updModel.CountryID;
+            updRegion.CountryId = updModel.CountryId;
 
             _repository.Update<Wine.Data.Region>(updRegion);
 

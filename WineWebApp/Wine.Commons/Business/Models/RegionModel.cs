@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Wine.Commons.Business.Models
 {
@@ -8,8 +9,9 @@ namespace Wine.Commons.Business.Models
 
         public string Name { get; set; }
 
-        public int CountryID { get; set; }
+        public int CountryId { get; set; }
 
+        [ForeignKey("CountryId")]
         public virtual CountryModel Country { get; set; }
 
         public virtual ICollection<WineModel> Wines { get; set; }

@@ -1,4 +1,6 @@
-﻿namespace WineWebApp.ViewModels
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WineWebApp.ViewModels
 {
     public class WineViewModel
     {
@@ -28,18 +30,17 @@
         public int ID { get; set; }
 
         public string Name { get; set; }
-
-        public int RegionID { get; set; }
-
+        
         public bool Sparkling { get; set; }
        
         public decimal Price { get; set; }
 
         public string Description { get; set; }
 
-        public virtual RegionViewModel Region { get; set; }
+        public int RegionId { get; set; }
 
-        //public string Country { get; set; }
+        [ForeignKey("RegionId")]
+        public virtual RegionViewModel Region { get; set; }
 
     }
 }

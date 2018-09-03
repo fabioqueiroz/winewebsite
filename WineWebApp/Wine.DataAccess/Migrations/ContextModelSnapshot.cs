@@ -37,13 +37,13 @@ namespace Wine.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CountryID");
+                    b.Property<int>("CountryId");
 
                     b.Property<string>("Name");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("CountryID");
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Regions");
                 });
@@ -53,8 +53,6 @@ namespace Wine.DataAccess.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Country");
 
                     b.Property<string>("Description");
 
@@ -77,7 +75,7 @@ namespace Wine.DataAccess.Migrations
                 {
                     b.HasOne("Wine.Data.Country", "Country")
                         .WithMany("Regions")
-                        .HasForeignKey("CountryID")
+                        .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

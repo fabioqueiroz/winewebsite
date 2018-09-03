@@ -39,7 +39,7 @@ namespace Wine.Test.Business
             var newWineModel = new WineModel
             {
                 Name = "Bordeaux",
-                RegionID = 1,
+                RegionId = 1,
                 Sparkling = false,
                 Price = 5.6M,
                 Description = "Red"
@@ -64,7 +64,7 @@ namespace Wine.Test.Business
             var newWineModel = new WineModel
             {
                 Name = "Marsala",
-                RegionID = 3,
+                RegionId = 3,
                 Sparkling = false,
                 Price = 12.3M,
                 Description = "White"
@@ -77,7 +77,7 @@ namespace Wine.Test.Business
 
             // Assert
             Assert.IsNotNull(output);
-            Assert.IsTrue(addWineModel.RegionID != 0);
+            Assert.IsTrue(addWineModel.RegionId != 0);
             Assert.IsTrue(output.Count > 0);
         }
 
@@ -88,7 +88,7 @@ namespace Wine.Test.Business
             var  newWineModel = new WineModel
             {
                 Name = "Valpolicella",
-                RegionID = 5,
+                RegionId = 5,
                 Sparkling = false,
                 Price = 7.9M,
                 Description = "Red"
@@ -110,7 +110,7 @@ namespace Wine.Test.Business
             var newWineModel = new WineModel
             {
                 Name = "Prosecco",
-                RegionID = 7,
+                RegionId = 7,
                 Sparkling = true,
                 Price = 11.8M,
                 Description = "White"
@@ -132,7 +132,7 @@ namespace Wine.Test.Business
             var newWineModel = new WineModel
             {
                 Name = "Rioja",
-                RegionID = 5,
+                RegionId = 5,
                 Sparkling = false,
                 Price = 4.7M,
                 Description = "Red"

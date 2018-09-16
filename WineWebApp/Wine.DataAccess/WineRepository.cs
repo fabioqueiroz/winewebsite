@@ -12,6 +12,7 @@ namespace Wine.DataAccess
         {
 
         }
+
         public WineRepository(IConfiguration configuration) : base()
         {
             this.Context = new Context(configuration);

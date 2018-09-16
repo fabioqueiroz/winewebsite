@@ -22,7 +22,7 @@ namespace Wine.Test.Delegates
         }
 
 
-        [TestMethod] // a test method never gives or parameters back
+        [TestMethod] // a test method never gives or takes parameters 
         public void TestSum()
         {
             Func<int, int, int> Sum = _value.AddSomething;

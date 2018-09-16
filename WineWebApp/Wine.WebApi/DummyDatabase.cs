@@ -10,12 +10,12 @@ namespace Wine.WebAPI
     {
         //List<WineAddViewModel> dummywineList { get; set; }
         //List<WineViewModel> dummydatabasewinelist { get; set; }
-         public List<WineAddViewModel> dummywinelist;
+         public List<WineViewModel> dummywinelist;
          public List<WineViewModel> dummydatabaselist;
 
          public DummyDatabase()
          {
-             dummywinelist = new List<WineAddViewModel>();
+             dummywinelist = new List<WineViewModel>();
              dummydatabaselist = new List<WineViewModel>();
          }
     }

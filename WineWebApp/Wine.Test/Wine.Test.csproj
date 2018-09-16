@@ -16,6 +16,7 @@
     <ProjectReference Include="..\Wine.Business\Wine.Business.csproj" />
     <ProjectReference Include="..\Wine.Commons\Wine.Commons.csproj" />
     <ProjectReference Include="..\Wine.DataAccess\Wine.DataAccess.csproj" />
+    <ProjectReference Include="..\WineWebApp\WineWebApp.csproj" />
   </ItemGroup>
 
   <ItemGroup>

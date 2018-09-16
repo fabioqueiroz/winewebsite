@@ -31,6 +31,8 @@ namespace WineWebApp
                     .AddScoped<ICountryService, CountryService>()
                     .AddScoped<IRegionService, RegionService>()
                     .AddScoped<IWineService, WineService>()
+                    .AddScoped<ICountryRepository, CountryRepository>()
+                    .AddScoped<IRegionRepository, RegionRepository>()
                     .AddScoped<IWineRepository, WineRepository>()
                     //.AddSingleton<IWineRepository>(new WineRepository(Configuration))
                     .BuildServiceProvider();            

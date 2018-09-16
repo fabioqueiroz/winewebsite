@@ -4,7 +4,8 @@
 
 @*<partial name="_WorldMap"></partial>*@
 
-@Html.Partial("_WorldMap");
+@*@Html.Partial("_WorldMap");*@
+@await Html.PartialAsync("_WorldMap");
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">

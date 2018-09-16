@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Wine.Commons.Business.Interfaces;
 using Wine.Commons.Business.Models;
+using Wine.Commons.CrossCutting;
 using Wine.Commons.DAL.Interfaces;
 using Wine.Data;
 
@@ -13,9 +14,9 @@ namespace Wine.Business.Services
 
     public class CountryService : ICountryService
     {
-        private IWineRepository _repository;
+        private ICountryRepository _repository;
 
-        public CountryService(IWineRepository repository)
+        public CountryService(ICountryRepository repository)
         {
             _repository = repository;
         }
@@ -97,10 +98,12 @@ namespace Wine.Business.Services
 
             await _repository.CommitAsync();
 
-            newModel.ID = addCountry.ID;
-            newModel.Name = addCountry.Name;
-            
-            return newModel;
+            //newModel.ID = addCountry.ID;
+            //newModel.Name = addCountry.Name;            
+
+            //return newModel;
+
+            return (CountryModel)Mapper.UpdateMapper(addCountry, newModel);
         }
 
         public async Task<CountryModel> UpdateCountry(CountryModel updModel)

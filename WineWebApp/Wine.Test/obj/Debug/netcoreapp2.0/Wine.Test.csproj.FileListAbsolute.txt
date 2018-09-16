@@ -68,3 +68,5 @@ C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.dl
 C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.pdb
 C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csprojAssemblyReference.cache
 C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csproj.CopyComplete
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\WineWebApp.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\WineWebApp.pdb

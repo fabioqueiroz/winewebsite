@@ -701,9 +701,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Projects\\WineWebApp\\WineWebApp\\Wine.Business\\Wine.Business.csproj",
       "projectName": "Wine.Business",
@@ -728,11 +725,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Projects\\WineWebApp\\WineWebApp\\Wine.Data\\Wine.Data.csproj": {
-              "projectPath": "C:\\Projects\\WineWebApp\\WineWebApp\\Wine.Data\\Wine.Data.csproj"
-            },
             "C:\\Projects\\WineWebApp\\WineWebApp\\Wine.Commons\\Wine.Commons.csproj": {
               "projectPath": "C:\\Projects\\WineWebApp\\WineWebApp\\Wine.Commons\\Wine.Commons.csproj"
+            },
+            "C:\\Projects\\WineWebApp\\WineWebApp\\Wine.Data\\Wine.Data.csproj": {
+              "projectPath": "C:\\Projects\\WineWebApp\\WineWebApp\\Wine.Data\\Wine.Data.csproj"
             }
           }
         }
@@ -749,7 +746,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },

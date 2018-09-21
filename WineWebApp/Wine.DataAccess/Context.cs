@@ -37,8 +37,10 @@ namespace Wine.DataAccess
             //var conectionString = configuration.GetConnectionString("DefaultConnection");           
             if (!optionsBuilder.IsConfigured)
             {
+                optionsBuilder
+                    .UseLazyLoadingProxies()
                 //optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-23IAU6E\\SQLSERVER;Initial Catalog=Wine;Integrated Security=False;User Id=sa;Password=Manchester2018!;MultipleActiveResultSets=True");
+                    .UseSqlServer("Data Source=DESKTOP-23IAU6E\\SQLSERVER;Initial Catalog=Wine;Integrated Security=False;User Id=sa;Password=Manchester2018!;MultipleActiveResultSets=True");
             }
         }
 

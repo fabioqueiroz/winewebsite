@@ -57,7 +57,7 @@ namespace Wine.Test.Reflection
             var source = new Country { ID = 666, Name = "Australia" };
             var destination = new CountryModel { ID = 777, Name = "Italy" };
 
-            var test = Mapper.UpdateGenerics(source, destination);
+            var test = Mapper.UpdateGenerics<Country, CountryModel>(source, destination);
 
             Assert.AreEqual(destination.Name, source.Name);
         }
@@ -68,9 +68,20 @@ namespace Wine.Test.Reflection
             var source = new Country { ID = 666, Name = "Australia" };
             var destination = new CountryModel { ID = 777, Name = "Italy" };
 
-            var test = Mapper.UpdateParamsMapper(source, destination, "ID");
+            var test = Mapper.UpdateParamsMapper(source, destination, "Name");
 
             Assert.AreEqual(((CountryModel)test).ID, source.ID);
+        }
+
+        [TestMethod]
+        public void TestMapperParamsGenerics()
+        {
+            var source = new Country { ID = 666, Name = "Australia" };
+            var destination = new CountryModel { ID = 777, Name = "Italy" };
+
+            var test = Mapper.UpdateParamsGenerics<Country, CountryModel>(source, destination);
+
+            Assert.AreEqual(destination.Name, source.Name);
         }
     }
 }

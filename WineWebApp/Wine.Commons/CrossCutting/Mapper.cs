@@ -31,25 +31,22 @@ namespace Wine.Commons.CrossCutting
             where TD : class
         {
             Type sourceType = source.GetType();
-            Type destinationType = sourceType.GetType();
+            Type destinationType = destination.GetType();
 
-            //var sourceTypeProperties = sourceType.GetProperties();
-            //var sourceTypeDestination = destinationType.GetProperties();
-
-            var sourceTypeProperties = sourceType.GetGenericArguments();
-            var sourceTypeDestination = destinationType.GetGenericArguments();
+            var sourceTypeProperties = sourceType.GetProperties();
+            var destinationTypeProperties = destinationType.GetProperties();
 
             foreach (var sourceProperty in sourceTypeProperties)
             {
-                sourceTypeDestination
-                    .FirstOrDefault(x => x.GenericParameterAttributes == sourceProperty.GenericParameterAttributes && x.Name == sourceProperty.Name)
-                    ?.MakeGenericType(sourceType.ReflectedType);
+                destinationTypeProperties
+                    .FirstOrDefault(x => x.PropertyType == sourceProperty.PropertyType && x.Name == sourceProperty.Name)
+                    ?.SetValue(destination, sourceProperty.GetValue(source));
             }
 
-            return (TD)destination;
+            return destination;
         }
 
-        public static object UpdateParamsMapper(object source, object destination, params string[] avoidProperties)
+        public static object UpdateParamsMapper(object source, object destination, params string[] targetProperties)
         {
             Type sourceType = source.GetType();
             Type destinationType = destination.GetType();
@@ -59,7 +56,7 @@ namespace Wine.Commons.CrossCutting
 
             foreach (var sourceProperty in sourceTypeProperties)
             {
-                if (avoidProperties.FirstOrDefault(x => x == sourceProperty.Name) != null)
+                if (targetProperties.FirstOrDefault(x => x == sourceProperty.Name) != null)
                 {
                     sourceTypeDestination
                     .FirstOrDefault(x => x.PropertyType == sourceProperty.PropertyType && x.Name == sourceProperty.Name)
@@ -69,6 +66,34 @@ namespace Wine.Commons.CrossCutting
 
             return destination;
 
+        }
+
+        public static TD UpdateParamsGenerics<TS, TD>(TS source, TD destination, params string[] targetProperties)
+            where TS : class
+            where TD : class
+        {
+            Type sourceType = source.GetType();
+            Type destinationType = destination.GetType();
+
+            var sourceTypeProperties = sourceType.GetProperties();
+            var destinationTypeProperties = destinationType.GetProperties();
+
+            foreach (var sourceProperty in sourceTypeProperties)
+            {
+                if (sourceProperty.PropertyType == typeof(ICollection<>))
+                {
+
+                }
+
+                else
+                {
+                    destinationTypeProperties
+                                .FirstOrDefault(x => x.PropertyType == sourceProperty.PropertyType && x.Name == sourceProperty.Name)
+                                ?.SetValue(destination, sourceProperty.GetValue(source)); 
+                }
+            }
+
+            return destination;
         }
     }
 }

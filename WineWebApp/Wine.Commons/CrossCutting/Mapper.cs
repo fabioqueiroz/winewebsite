@@ -68,9 +68,10 @@ namespace Wine.Commons.CrossCutting
 
         }
 
-        public static TD UpdateParamsGenerics<TS, TD>(TS source, TD destination, params string[] targetProperties)
+        public static TD UpdateParamsGenerics<TS, TD, TP>(TS source, TD destination)
             where TS : class
             where TD : class
+            where TP : class
         {
             Type sourceType = source.GetType();
             Type destinationType = destination.GetType();
@@ -80,7 +81,7 @@ namespace Wine.Commons.CrossCutting
 
             foreach (var sourceProperty in sourceTypeProperties)
             {
-                if (sourceProperty.PropertyType == typeof(ICollection<>))
+                if (sourceProperty.PropertyType == typeof(ICollection<TP>))
                 {
 
                 }

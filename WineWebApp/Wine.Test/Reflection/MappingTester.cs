@@ -34,10 +34,11 @@ namespace Wine.Test.Reflection
 
             _serviceProvider = new ServiceCollection()
                 .AddScoped<ICountryService, CountryService>()
-                .AddSingleton<ICountryRepository>(new CountryRepository(_configurationBuilder))
+                .AddSingleton<IWineRepository>(new WineRepository(_configurationBuilder))
                 .BuildServiceProvider();
 
             _countryService = _serviceProvider.GetService<ICountryService>();
+            _wineRepository = _serviceProvider.GetService<IWineRepository>();
         }
 
         [TestMethod]
@@ -79,7 +80,7 @@ namespace Wine.Test.Reflection
             var source = new Country { ID = 666, Name = "Australia" };
             var destination = new CountryModel { ID = 777, Name = "Italy" };
 
-            var test = Mapper.UpdateParamsGenerics<Country, CountryModel>(source, destination);
+            var test = Mapper.UpdateParamsGenerics<Country, CountryModel, Region>(source, destination);
 
             Assert.AreEqual(destination.Name, source.Name);
         }

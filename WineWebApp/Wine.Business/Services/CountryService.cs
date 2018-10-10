@@ -11,12 +11,10 @@ using Wine.Data;
 
 namespace Wine.Business.Services
 {
-
     public class CountryService : ICountryService
     {
-        private ICountryRepository _repository;
-
-        public CountryService(ICountryRepository repository)
+        private IWineRepository _repository;
+        public CountryService(IWineRepository repository)
         {
             _repository = repository;
         }

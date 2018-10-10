@@ -11,8 +11,8 @@ namespace Wine.Business.Services
 {
     public class RegionService : IRegionService
     {
-        private IRegionRepository _repository;
-        public RegionService(IRegionRepository repository)
+        private IWineRepository _repository;
+        public RegionService(IWineRepository repository)
         {
             _repository = repository;
         }

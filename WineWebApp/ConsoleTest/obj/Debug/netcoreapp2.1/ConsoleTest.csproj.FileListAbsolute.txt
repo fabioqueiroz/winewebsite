@@ -1,0 +1,11 @@
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.deps.json
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.runtimeconfig.json
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.runtimeconfig.dev.json
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.dll
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.pdb
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.csprojAssemblyReference.cache
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.csproj.CoreCompileInputs.cache
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.AssemblyInfoInputs.cache
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.AssemblyInfo.cs
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.dll
+C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.pdb

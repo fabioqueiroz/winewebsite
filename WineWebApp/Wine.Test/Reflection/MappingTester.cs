@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Wine.Business.Services;
 using Wine.Commons.Business.Interfaces;
@@ -75,10 +76,38 @@ namespace Wine.Test.Reflection
         }
 
         [TestMethod]
-        public void TestMapperParamsGenerics()
+        public void TestMapperParamsGenerics2()
         {
-            var source = new Country { ID = 666, Name = "Australia" };
-            var destination = new CountryModel { ID = 777, Name = "Italy" };
+            var findEntry = _wineRepository.GetSingle<Country>(x => x.ID == 1);
+            var findEntry2 = _wineRepository.GetSingle<Country>(x => x.ID == 2);
+
+            var source = new Country
+            {
+                ID = 1,
+                Name = "Italy",
+                Regions = findEntry.Regions?.Select(x => new Region
+                {
+                    ID = x.ID,
+                    Name = x.Name,
+                    CountryId = x.CountryId
+
+                }).ToList()
+
+            };
+
+            var destination = new CountryModel
+            {
+                ID = 2,
+                Name = "France",
+                Regions = findEntry2.Regions?.Select(x => new RegionModel
+                {
+                    ID = x.ID,
+                    Name = x.Name,
+                    CountryId = x.CountryId
+
+                }).ToList()
+
+            };
 
             var test = Mapper.UpdateParamsGenerics<Country, CountryModel, Region>(source, destination);
 

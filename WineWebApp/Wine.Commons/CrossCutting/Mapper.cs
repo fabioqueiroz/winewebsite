@@ -83,14 +83,21 @@ namespace Wine.Commons.CrossCutting
             {
                 if (sourceProperty.PropertyType == typeof(ICollection<TP>))
                 {
+                    var collectionProperties = sourceProperty.PropertyType.GetProperties();
 
+                    foreach (var cp in collectionProperties as System.Collections.IEnumerable)
+                    {
+                        destinationTypeProperties
+                            .FirstOrDefault(x => x.PropertyType == typeof(IEnumerable<TP>) && x.Name == sourceProperty.Name)
+                            ?.SetValue(destination, sourceProperty.GetValue(cp));
+                    }
                 }
 
                 else
                 {
                     destinationTypeProperties
-                                .FirstOrDefault(x => x.PropertyType == sourceProperty.PropertyType && x.Name == sourceProperty.Name)
-                                ?.SetValue(destination, sourceProperty.GetValue(source)); 
+                        .FirstOrDefault(x => x.PropertyType == sourceProperty.PropertyType && x.Name == sourceProperty.Name)
+                        ?.SetValue(destination, sourceProperty.GetValue(source));
                 }
             }
 

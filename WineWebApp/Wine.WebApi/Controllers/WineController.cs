@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Security;
 using System.Diagnostics;
 using Wine.DataAccess;
+using Wine.Commons.Exceptions;
 
 namespace Wine.WebAPI.Controllers
 {
@@ -64,6 +65,11 @@ namespace Wine.WebAPI.Controllers
                     Sparkling = wineModel.Sparkling,
                     RegionId = wineModel.RegionId
                 };
+
+                if (wineResponse == null)
+                {
+                    throw new ItemNotFoundExceptions("The id was not found");
+                }
 
                 return Ok(wineResponse);
             }
@@ -210,6 +216,8 @@ namespace Wine.WebAPI.Controllers
                     return NotFound();
                 }
 
+                CheckWebsiteId(id);
+
                 var wine = _context.Wines.Where(x => x.ID == id).FirstOrDefault();  
                 
                 if (wine != null)
@@ -223,6 +231,11 @@ namespace Wine.WebAPI.Controllers
                 return Ok();
             }
             
+            catch(ItemNotFoundExceptions ex)
+            {
+                return StatusCode(429);
+            }
+
             catch(HttpRequestException ex) // priority 3
             {
                 Trace.TraceError(ex.Message);
@@ -240,7 +253,17 @@ namespace Wine.WebAPI.Controllers
                 Trace.TraceError(ex.Message); 
                 return BadRequest();
             }
+           
 
         }
+
+        private void CheckWebsiteId(int? id)
+        {
+            if (id < 1)
+            {
+                throw new ItemNotFoundExceptions("Ilegal value");
+            }
+        }
     }
+    
 }  

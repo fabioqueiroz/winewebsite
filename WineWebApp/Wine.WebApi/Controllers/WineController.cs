@@ -207,7 +207,7 @@ namespace Wine.WebAPI.Controllers
         }
         
         [HttpDelete("{id:int}")]
-        public IActionResult DeleteWine(int? id) // ? means that it can handle null, unlike just int by default
+        public IActionResult DeleteWine(int? id) 
         {
             try
             {
@@ -233,6 +233,7 @@ namespace Wine.WebAPI.Controllers
             
             catch(ItemNotFoundExceptions ex)
             {
+                Trace.TraceError(ex.Message);
                 return StatusCode(429);
             }
 

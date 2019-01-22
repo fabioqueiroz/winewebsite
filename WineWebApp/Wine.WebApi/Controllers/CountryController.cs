@@ -11,6 +11,7 @@ using System.Security;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Wine.DataAccess;
+using Wine.Commons.Exceptions;
 
 namespace Wine.WebAPI.Controllers
 {
@@ -53,6 +54,11 @@ namespace Wine.WebAPI.Controllers
                     ID = countryModel.ID,
                     Name = countryModel.Name
                 };
+
+                if (countryResponse == null)
+                {
+                    throw new ItemNotFoundExceptions("The country was not found");
+                }
 
                 return Ok(countryResponse);
             }
@@ -182,6 +188,7 @@ namespace Wine.WebAPI.Controllers
                 {
                     return NotFound();
                 }
+                CheckCountryId(id);
 
                 var delCountry = _context.Countries.Where(x => x.ID == id).FirstOrDefault();
 
@@ -198,7 +205,13 @@ namespace Wine.WebAPI.Controllers
 
                 return Ok();
             }
-                
+            
+            catch(ItemNotFoundExceptions ex)
+            {
+                Trace.TraceError(ex.Message);
+                return StatusCode(429);
+            }
+
             catch (HttpRequestException ex)
             {
                 Trace.TraceError(ex.Message);
@@ -215,6 +228,14 @@ namespace Wine.WebAPI.Controllers
             {
                 Trace.TraceError(ex.Message);
                 return BadRequest();
+            }
+        }
+
+        private void CheckCountryId(int? id)
+        {
+            if (id < 1)
+            {
+                throw new ItemNotFoundExceptions("The region wans not found");
             }
         }
     }

@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Security;
 using Microsoft.EntityFrameworkCore;
 using Wine.DataAccess;
+using Wine.Commons.Exceptions;
 
 namespace Wine.WebAPI.Controllers
 {
@@ -55,6 +56,11 @@ namespace Wine.WebAPI.Controllers
                     CountryId = regionModel.CountryId,
 
                 };
+
+                if (regionResponse == null)
+                {
+                    throw new ItemNotFoundExceptions("The region wans not found");
+                }
 
                 return Ok(regionResponse);
             }
@@ -212,6 +218,8 @@ namespace Wine.WebAPI.Controllers
                     return NotFound();
                 }
 
+                CheckRegionId(id);
+
                 var delRegion = _context.Regions.Where(x => x.ID == id).FirstOrDefault();
 
                 // wines also being deleted without needing to query as below:
@@ -229,6 +237,12 @@ namespace Wine.WebAPI.Controllers
                 return Ok();
             }
             
+            catch(ItemNotFoundExceptions ex)
+            {
+                Trace.TraceError(ex.Message);
+                return StatusCode(429);
+            }
+
             catch (HttpRequestException ex)
             {
                 Trace.TraceError(ex.Message);
@@ -245,6 +259,14 @@ namespace Wine.WebAPI.Controllers
             {
                 Trace.TraceError(ex.Message);
                 return BadRequest();
+            }
+        }
+
+        private void CheckRegionId(int? id)
+        {
+            if (id < 1)
+            {
+                throw new ItemNotFoundExceptions("The region wans not found");
             }
         }
     }

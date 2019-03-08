@@ -44,9 +44,10 @@ namespace Wine.WebAPI.Controllers
         //    });
         //}
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")]        
         public IActionResult GetWinebyId(int? id)
         {
+            
             try
             {
                 if (id == null)

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "515c4fb0b9c1d68141215eae0008fcf647ccee74"
   },
   "compilationOptions": {},
   "targets": {
@@ -15,7 +15,22 @@
           "Wine.Business.dll": {}
         }
       },
+      "FluentValidation/8.1.3": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.3.0"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/4.4.1": {},
       "Wine.Commons/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "8.1.3"
+        },
         "runtime": {
           "Wine.Commons.dll": {}
         }
@@ -32,6 +47,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/8.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OHV6NFyGKP+v8us+X+yJ5hjFEjiJUp6MJyRNzcf4jc7GnRHsrmBwV6IyrQQ65a73r8ikaszH33InQG9ANB5j2g==",
+      "path": "fluentvalidation/8.1.3",
+      "hashPath": "fluentvalidation.8.1.3.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/8XSRz3cgSSPEdiV6UFhlfk6/FX9P10MAja4XPCyMCz7/0YTqjtCh4e0jjLYOCJL8jK7O/vhtUjYo1TOSuPngQ==",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "Wine.Commons/1.0.0": {
       "type": "project",

@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "f960c4f22391b8eabdf5cd7373c5b86afaaf2677"
+    "signature": "556786aca3c5072e71af4131d9255816c372e255"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Wine.Test/1.0.0": {
         "dependencies": {
+          "FluentValidation": "8.1.3",
           "MSTest.TestAdapter": "1.3.2",
           "MSTest.TestFramework": "1.3.2",
           "Microsoft.NET.Test.Sdk": "15.8.0",
@@ -36,6 +37,17 @@
           "lib/netstandard1.3/Castle.Core.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.2.1.0"
+          }
+        }
+      },
+      "FluentValidation/8.1.3": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.3.0"
           }
         }
       },
@@ -4448,6 +4460,9 @@
         }
       },
       "Wine.Commons/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "8.1.3"
+        },
         "runtime": {
           "Wine.Commons.dll": {}
         }
@@ -4502,6 +4517,13 @@
       "sha512": "sha512-XSNA0Gc1Zu33L+8+/3Tqt+aFu8QWS8UenVHZ7RenIP5wJfhoLrA4PnNscpxReeo5aBq8PDoGnV8rNaOzIOUo/w==",
       "path": "castle.core/4.2.1",
       "hashPath": "castle.core.4.2.1.nupkg.sha512"
+    },
+    "FluentValidation/8.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OHV6NFyGKP+v8us+X+yJ5hjFEjiJUp6MJyRNzcf4jc7GnRHsrmBwV6IyrQQ65a73r8ikaszH33InQG9ANB5j2g==",
+      "path": "fluentvalidation/8.1.3",
+      "hashPath": "fluentvalidation.8.1.3.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
@@ -5577,7 +5599,7 @@
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
+      "sha512": "sha512-UMlN++q5qqzQ2HH+uOrKxN5fmBXMQDhrYkSaPJxhmyzfJaFPirrVr1raim/Ocq1psAZoB9+7JSAf0GDAX35wUg==",
       "path": "microsoft.extensions.platformabstractions/1.1.0",
       "hashPath": "microsoft.extensions.platformabstractions.1.1.0.nupkg.sha512"
     },

@@ -23,6 +23,18 @@
           "lib/netstandard1.3/Castle.Core.dll": {}
         }
       },
+      "FluentValidation/8.1.3": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -1371,6 +1383,9 @@
       "Wine.Commons/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "FluentValidation": "8.1.3"
+        },
         "compile": {
           "bin/placeholder/Wine.Commons.dll": {}
         },
@@ -1410,6 +1425,24 @@
         "lib/netstandard1.3/Castle.Core.dll",
         "lib/netstandard1.3/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "FluentValidation/8.1.3": {
+      "sha512": "OHV6NFyGKP+v8us+X+yJ5hjFEjiJUp6MJyRNzcf4jc7GnRHsrmBwV6IyrQQ65a73r8ikaszH33InQG9ANB5j2g==",
+      "type": "package",
+      "path": "fluentvalidation/8.1.3",
+      "files": [
+        ".signature.p7s",
+        "fluentvalidation.8.1.3.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net45/FluentValidation.dll",
+        "lib/net45/FluentValidation.xml",
+        "lib/netstandard1.1/FluentValidation.dll",
+        "lib/netstandard1.1/FluentValidation.xml",
+        "lib/netstandard1.6/FluentValidation.dll",
+        "lib/netstandard1.6/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -5033,6 +5066,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\Fabio Queiroz\\source\\repos\\EncryptionLibrary\\EncryptionLibrary": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

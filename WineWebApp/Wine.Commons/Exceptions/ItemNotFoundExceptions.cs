@@ -48,5 +48,6 @@ namespace Wine.Commons.Exceptions
 
         //protected ItemNotFoundException(SerializationInfo info, StreamingContext context)
         //    : base(info, context) { }
+
     }
 }

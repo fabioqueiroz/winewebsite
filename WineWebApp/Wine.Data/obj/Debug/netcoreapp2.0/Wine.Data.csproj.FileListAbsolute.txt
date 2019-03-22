@@ -24,3 +24,4 @@ C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.As
 C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.AssemblyInfo.cs
 C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.dll
 C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.csprojAssemblyReference.cache

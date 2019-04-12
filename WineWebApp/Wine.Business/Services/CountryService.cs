@@ -68,7 +68,7 @@ namespace Wine.Business.Services
 
         public async Task<CountryModel> GetCountryByName(string countryName)
         {
-            var getCountryName = await _repository.GetSingleAsync<Wine.Data.Country>(x => x.Name == countryName);
+            var getCountryName = await _repository.GetSingleAsync<Wine.Data.Country>(x => x.Name.Equals(countryName));
 
             var displayCountry = new CountryModel()
             {
@@ -106,7 +106,7 @@ namespace Wine.Business.Services
 
         public async Task<CountryModel> UpdateCountry(CountryModel updModel)
         {
-            var updCountry = await _repository.GetSingleAsync<Wine.Data.Country>(x => x.Name == updModel.Name);       
+            var updCountry = await _repository.GetSingleAsync<Wine.Data.Country>(x => x.Name.Equals(updModel.Name));       
 
             updCountry.Name = updModel.Name;
 
@@ -132,7 +132,7 @@ namespace Wine.Business.Services
 
         public async Task<bool> DeleteCountryByName(string name)
         {
-            var delCountry = await _repository.GetSingleAsync<Wine.Data.Country>(x => x.Name == name, x => x.Regions);
+            var delCountry = await _repository.GetSingleAsync<Wine.Data.Country>(x => x.Name.Equals(name), x => x.Regions);
 
             _repository.DeleteMany<Wine.Data.Region>(delCountry.Regions.ToArray());
 

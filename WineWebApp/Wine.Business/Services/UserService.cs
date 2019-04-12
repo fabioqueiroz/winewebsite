@@ -44,23 +44,73 @@ namespace Wine.Business.Services
             return model;
         }
 
-        public Task<UserModel> GetUserByName(string userName)
+        public async Task<UserModel> GetUserByName(string userName)
         {
-            throw new NotImplementedException();
+            var user = await _repository.GetSingleAsync<User>(x => x.UserName.Equals(userName));
+
+            var userModel = new UserModel
+            {
+                Id = user.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserName = user.UserName
+            };
+
+            return userModel;
         }
 
-        public Task<UserModel> UpdateUserInfo(UserModel userInfo)
+        public async Task<UserModel> UpdateUserInfo(UserModel userInfo)
         {
-            throw new NotImplementedException();
+            var user = await _repository.GetSingleAsync<User>(x => x.UserName.Equals(userInfo.UserName));
+
+            user.FirstName = userInfo.FirstName;
+            user.LastName = userInfo.LastName;
+            user.UserName = userInfo.UserName;
+
+            _repository.Update<User>(user);
+
+            await _repository.CommitAsync();
+
+            return userInfo;
         }
 
-        public Task<UserModel> UpdateUserPassword(UserUpdateModel userUpdateModel, string oldPassword, string newPassword, string resetPassword)
+        public async Task<UserUpdateModel> UpdateUserPassword(UserUpdateModel userUpdateModel, string oldPassword, string newPassword, string resetPassword)
         {
-            throw new NotImplementedException();
+            var userInDb = await _repository.GetSingleAsync<User>(x => x.UserName.Equals(userUpdateModel.UserName));
+
+            if (string.IsNullOrWhiteSpace(oldPassword) || string.IsNullOrWhiteSpace(newPassword) || string.IsNullOrWhiteSpace(resetPassword))
+            {
+                throw new UserExceptions("Invalid password");
+            }
+
+            byte[] hashPasswordInDb = Encryptor.Hash(oldPassword, userInDb.Salt);
+
+            if (!Encryptor.PasswordChecker(oldPassword, userInDb.Salt, hashPasswordInDb))
+            {
+                throw new UserExceptions("Invalid password");
+            }
+
+            if (!oldPassword.Equals(newPassword) && !oldPassword.Equals(resetPassword) && newPassword.Equals(resetPassword))
+            {
+                userInDb.Hash = Encryptor.Hash(newPassword, userInDb.Hash);
+            }
+
+            _repository.Update<User>(userInDb);
+
+            await _repository.CommitAsync();
+
+            return userUpdateModel;
         }
-        public Task<UserModel> DeleteUser(string name)
+
+        public async Task<bool> DeleteUser(string name)
         {
-            throw new NotImplementedException();
+            var user = await _repository.GetSingleAsync<User>(x => x.UserName.Equals(name));
+
+            _repository.Delete<User>(user);
+
+            await _repository.CommitAsync();
+
+            return true;
         }
     }
 }

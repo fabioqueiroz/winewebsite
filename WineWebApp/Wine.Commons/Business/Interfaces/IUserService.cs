@@ -14,8 +14,8 @@ namespace Wine.Commons.Business.Interfaces
 
         Task<UserModel> UpdateUserInfo(UserModel userInfo);
 
-        Task<UserModel> UpdateUserPassword(UserUpdateModel userUpdateModel, string oldPassword, string newPassword, string resetPassword);
+        Task<UserUpdateModel> UpdateUserPassword(UserUpdateModel userUpdateModel, string oldPassword, string newPassword, string resetPassword);
 
-        Task<UserModel> DeleteUser(string name);
+        Task<bool> DeleteUser(string name);
     }
 }

@@ -30,7 +30,7 @@ namespace Wine.WebApi.Controllers
 
             try
             {
-                _userService.Register(_mapper.Map<UserModel>(newUser), newUser.Password);
+                _userService.Register(_mapper.Map<UserModel>(newUser), newUser.OldPassword);
 
                 return Ok();
             }

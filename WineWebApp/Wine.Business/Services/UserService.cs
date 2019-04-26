@@ -102,9 +102,9 @@ namespace Wine.Business.Services
             return userUpdateModel;
         }
 
-        public async Task<bool> DeleteUser(string name)
+        public async Task<bool> DeleteUser(string userName)
         {
-            var user = await _repository.GetSingleAsync<User>(x => x.UserName.Equals(name));
+            var user = await _repository.GetSingleAsync<User>(x => x.UserName.Equals(userName));
 
             _repository.Delete<User>(user);
 

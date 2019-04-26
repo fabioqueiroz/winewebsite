@@ -70,3 +70,5 @@ C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.cs
 C:\Projects\WineWebApp\WineWebApp\Wine.Test\obj\Debug\netcoreapp2.0\Wine.Test.csproj.CopyComplete
 C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\WineWebApp.dll
 C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\WineWebApp.pdb
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.WebApi.dll
+C:\Projects\WineWebApp\WineWebApp\Wine.Test\bin\Debug\netcoreapp2.0\Wine.WebApi.pdb

@@ -131,7 +131,7 @@ namespace Wine.Business.Services
         }
 
         public async Task<bool> DeleteCountryByName(string name)
-        {
+         {
             var delCountry = await _repository.GetSingleAsync<Wine.Data.Country>(x => x.Name.Equals(name), x => x.Regions);
 
             _repository.DeleteMany<Wine.Data.Region>(delCountry.Regions.ToArray());

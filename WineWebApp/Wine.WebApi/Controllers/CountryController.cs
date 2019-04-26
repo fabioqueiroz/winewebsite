@@ -235,7 +235,7 @@ namespace Wine.WebAPI.Controllers
         {
             if (id < 1)
             {
-                throw new ItemNotFoundExceptions("The region wans not found");
+                throw new ItemNotFoundExceptions("The region was not found");
             }
         }
     }

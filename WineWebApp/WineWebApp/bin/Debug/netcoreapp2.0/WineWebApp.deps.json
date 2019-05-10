@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "8680c940090c1688e7cf02ab517bee387f04b312"
+    "signature": "a9e6aa044bc63ea14d3e71dbb795c809fdef0cdb"
   },
   "compilationOptions": {
     "defines": [
@@ -41,6 +41,21 @@
         },
         "compile": {
           "WineWebApp.dll": {}
+        }
+      },
+      "AutoMapper/8.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
       "Castle.Core/4.2.1": {
@@ -4755,6 +4770,7 @@
       },
       "Wine.Business/1.0.0": {
         "dependencies": {
+          "AutoMapper": "8.1.0",
           "Wine.Commons": "1.0.0",
           "Wine.Data": "1.0.0"
         },
@@ -4982,6 +4998,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YyGENUyP7CdOJcw2TCEMtkuRgj9iRFLHeACrfBEDPY5xIiTB/iDxNFdOy5br4abWR8KnSdQeK/x+GQLE7uiFtQ==",
+      "path": "automapper/8.1.0",
+      "hashPath": "automapper.8.1.0.nupkg.sha512"
     },
     "Castle.Core/4.2.1": {
       "type": "package",

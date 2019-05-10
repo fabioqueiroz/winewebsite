@@ -8,15 +8,19 @@ using Wine.Commons.CrossCutting;
 using Wine.Commons.DAL.Interfaces;
 using Wine.Commons.Exceptions;
 using Wine.Data;
+using AutoMapper;
 
 namespace Wine.Business.Services
 {
     public class UserService : IUserService
     {
         private IWineRepository _repository;
+        private IMapper _mapper;
+
         public UserService(IWineRepository repository)
         {
             _repository = repository;
+
         }
 
 
@@ -32,6 +36,7 @@ namespace Wine.Business.Services
 
             var newUser = _repository.Add<User>(new User
             {
+                 
                  FirstName = model.FirstName,
                  LastName = model.LastName,
                  UserName = model.UserName,
@@ -41,6 +46,12 @@ namespace Wine.Business.Services
 
             _repository.Commit();
 
+            model.Id = newUser.Id;
+            model.FirstName = newUser.FirstName;
+            model.LastName = newUser.LastName;
+            model.UserName = newUser.UserName;
+            model.Hash = newUser.Hash;
+            //return _mapper.Map<User, UserModel>(newUser);
             return model;
         }
 
@@ -67,11 +78,11 @@ namespace Wine.Business.Services
             user.LastName = userInfo.LastName;
             user.UserName = userInfo.UserName;
 
-            _repository.Update<User>(user);
+            user = _repository.Update<User>(user);
 
             await _repository.CommitAsync();
 
-            return userInfo;
+            return new UserModel { FirstName = userInfo.FirstName, LastName = userInfo.LastName, UserName = userInfo.UserName };
         }
 
         public async Task<UserUpdateModel> UpdateUserPassword(UserUpdateModel userUpdateModel, string oldPassword, string newPassword, string resetPassword)

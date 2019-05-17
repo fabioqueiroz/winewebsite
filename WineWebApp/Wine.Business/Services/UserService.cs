@@ -106,11 +106,21 @@ namespace Wine.Business.Services
                 userInDb.Hash = Encryptor.Hash(newPassword, userInDb.Hash);
             }
 
-            _repository.Update<User>(userInDb);
+            var user = _repository.Update<User>(userInDb);
 
             await _repository.CommitAsync();
 
-            return userUpdateModel;
+            var newUpdModel = new UserUpdateModel
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserName = user.UserName,
+                OldPassword = oldPassword,
+                NewPassword = newPassword,
+                RepeatPassword = resetPassword
+            };
+
+            return newUpdModel;
         }
 
         public async Task<bool> DeleteUser(string userName)

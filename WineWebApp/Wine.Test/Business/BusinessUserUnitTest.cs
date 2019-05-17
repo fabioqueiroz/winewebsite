@@ -41,7 +41,8 @@ namespace Wine.Test.Business
             var repoMock = new Mock<IWineRepository>();
 
             // Act 
-            repoMock.Setup(x => x.GetSingleAsync<User>(It.IsAny<Expression<Func<User, bool>>>())).Returns(Task.FromResult(new User { FirstName = "test name"}));
+            repoMock.Setup(x => x.GetSingleAsync<User>(It.IsAny<Expression<Func<User, bool>>>()))
+                .Returns(Task.FromResult(new User { FirstName = "test name"}));
 
              _userService = new UserService(repoMock.Object);
            
@@ -119,7 +120,54 @@ namespace Wine.Test.Business
             Assert.AreEqual(newUser.UserName, userModel.UserName);
         }
 
-        // missing test UpdateUserPassword
+        [TestMethod]
+        public async Task TestUpdatePassword() 
+        {
+            string password = "password 1";
+            string password2 = "password 3";
+
+            var hashResult = Encryptor.Hash(password, new byte[] { 0x41, 0x42, 0x43 });
+            var newHashResult = Encryptor.Hash(password2, new byte[] { 0x41, 0x42, 0x43 });
+
+            var repoMock = new Mock<IWineRepository>();
+
+            repoMock.Setup(x => x.GetSingleAsync<User>(It.IsAny<Expression<Func<User, bool>>>()))
+                .Returns(Task.FromResult<User>(new User { Salt = new byte[] { 0x41, 0x42, 0x43 }, Hash = hashResult }));
+
+            repoMock.Setup(x => x.Update<User>(It.IsAny<User>()))
+                .Returns(new User { FirstName = "fname", LastName = "lname", UserName = "username", Salt = new byte[] { 0x41, 0x42, 0x43 }, Hash = newHashResult });
+
+            _userService = new UserService(repoMock.Object);
+           
+
+            var userUpdModel = new UserUpdateModel
+            {
+                FirstName = "fname",
+                LastName = "lname",
+                UserName = "username",
+                OldPassword = "password 1",
+                NewPassword = "password 3",
+                RepeatPassword = "password 3"
+            };
+
+            var newPass = await _userService.UpdateUserPassword(userUpdModel, userUpdModel.OldPassword, userUpdModel.NewPassword, userUpdModel.RepeatPassword);
+
+            Assert.IsTrue(Encryptor.PasswordChecker( newPass.NewPassword, new byte[] { 0x41, 0x42, 0x43 }, newHashResult));
+
+        }
+
+        [TestMethod]
+        public void TestHashFunction()
+        {
+            string testString = "password 1";
+
+            var result = Encryptor.Hash(testString, new byte[] { 0x41, 0x42, 0x43 });
+
+            var asciiResult = System.Text.Encoding.Default.GetString(result);
+
+            Assert.IsNotNull(result);
+        }
+
 
         [TestMethod]
         public async Task TestDelete()

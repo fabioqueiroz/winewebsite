@@ -40,7 +40,7 @@ namespace Wine.DataAccess
                 optionsBuilder
                     .UseLazyLoadingProxies()
                 //optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-                    .UseSqlServer("Data Source=DESKTOP-23IAU6E\\SQLSERVER;Initial Catalog=Wine;Integrated Security=False;User Id=sa;Password=Manchester2018!;MultipleActiveResultSets=True");
+                    .UseSqlServer("Data Source=LAPTOP-JEDG5RJB\\LAPSQLSERVER;Initial Catalog=Wine;Integrated Security=False;User Id=sa;Password=fabio1980;MultipleActiveResultSets=True");
             }
         }
 

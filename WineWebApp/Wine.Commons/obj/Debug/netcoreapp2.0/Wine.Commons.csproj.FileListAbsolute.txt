@@ -28,3 +28,12 @@ C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Comm
 C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.dll
 C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.pdb
 C:\Projects\WineWebApp\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.csprojAssemblyReference.cache
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\bin\Debug\netcoreapp2.0\Wine.Commons.deps.json
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\bin\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\bin\Debug\netcoreapp2.0\Wine.Commons.pdb
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.csprojAssemblyReference.cache
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.AssemblyInfoInputs.cache
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.AssemblyInfo.cs
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.dll
+C:\Projects\winewebsite\WineWebApp\Wine.Commons\obj\Debug\netcoreapp2.0\Wine.Commons.pdb

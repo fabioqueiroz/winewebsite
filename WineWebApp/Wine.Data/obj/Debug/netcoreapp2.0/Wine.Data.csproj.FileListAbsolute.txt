@@ -25,3 +25,10 @@ C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.As
 C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.dll
 C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.pdb
 C:\Projects\WineWebApp\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.csprojAssemblyReference.cache
+C:\Projects\winewebsite\WineWebApp\Wine.Data\bin\Debug\netcoreapp2.0\Wine.Data.deps.json
+C:\Projects\winewebsite\WineWebApp\Wine.Data\bin\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\winewebsite\WineWebApp\Wine.Data\bin\Debug\netcoreapp2.0\Wine.Data.pdb
+C:\Projects\winewebsite\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.AssemblyInfoInputs.cache
+C:\Projects\winewebsite\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.AssemblyInfo.cs
+C:\Projects\winewebsite\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.dll
+C:\Projects\winewebsite\WineWebApp\Wine.Data\obj\Debug\netcoreapp2.0\Wine.Data.pdb

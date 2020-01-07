@@ -9,3 +9,12 @@ C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTes
 C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.AssemblyInfo.cs
 C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.dll
 C:\Projects\WineWebApp\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.pdb
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.deps.json
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.runtimeconfig.json
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.runtimeconfig.dev.json
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.dll
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\bin\Debug\netcoreapp2.1\ConsoleTest.pdb
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.AssemblyInfoInputs.cache
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.AssemblyInfo.cs
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.dll
+C:\Projects\winewebsite\WineWebApp\ConsoleTest\obj\Debug\netcoreapp2.1\ConsoleTest.pdb
